@@ -1,47 +1,43 @@
+***
 # Rovio
-+ Rovio setup for following nvidia boards
++ **hardware setup**
     + jetson TX2 - Jetpack 4.2
     + jetson Xavier NX - Jetpack 4.4
-+ version info
+    + realsense D435i (color, infra1, infra2)
+    + pixhawk4 mini
+    <br>
++ **software setup**
     + Ubuntu: 18.04 
     + ROS: Melodic 
-+ github link: [here](https://github.com/HKUST-Aerial-Robotics/VINS-Mono)
+    <br>
++ **github link**: [ethz_asl](https://github.com/ethz-asl/rovio)
+***
 <br>
 
 # Index
 ### 1. Prerequisites
-####    ● Eigen
-####    ● Ceres solver
+####    &nbsp;&nbsp;&nbsp;&nbsp;● kindr
+####    &nbsp;&nbsp;&nbsp;&nbsp;● lightweight_filtering (as submodule, use "git submodule update --init --recursive")
 ### 2. Installation
 ### 3. TX2, NX
-####    ● Actually, there is no installation difference between TX2 and NX
+####    &nbsp;&nbsp;&nbsp;&nbsp;● Actually, there is no installation difference between TX2 and NX
+### 4. Run
 <br><br>
 
-# 1. Prerequisites
-### ● Eigen
-+ Eigen from [here](http://eigen.tuxfamily.org/index.php?title=Main_Page)
+## 1. Prerequisites
+### ● kindr
++ kindr from [here](https://github.com/ethz-asl/kindr)
 ```
-$ wget -O eigen.zip http://bitbucket.org/eigen/eigen/get/3.3.7.zip #check version
-$ unzip eigen.zip
-$ mkdir eigen-build && cd eigen-build
-$ cmake ../eigen_source_folder_name && sudo make install
+$ 
 ```
-### ● Ceres solver
-+ Ceres solver from [here](http://ceres-solver.org/installation.html)
+### ● lightweight_filtering
++ as submodule, use "git submodule update --init --recursive"
 ```
-$ sudo apt-get install -y cmake libgoogle-glog-dev libatlas-base-dev libsuitesparse-dev
-$ wget http://ceres-solver.org/ceres-solver-1.14.0.tar.gz
-$ tar zxf ceres-solver-1.14.0.tar.gz
-$ mkdir ceres-bin
-$ mkdir solver && cd ceres-bin
-$ cmake ../ceres-solver-1.14.0 -DEXPORT_BUILD_DIR=ON -DCMAKE_INSTALL_PREFIX="../solver"  #good for build without being root privileged and at wanted directory
-$ make -j8 # 8 : number of cores
-$ make test
-$ make install
+$ su
 ```
 <br><br>
 
-# 2. Installation
+## 2. Installation
 + git clone and build from source
 ```
 $ cd ~/catkin_ws/src
@@ -51,6 +47,15 @@ $ source ~/catkin_ws/devel/setup.bash
 ```
 <br><br>
 
-### 3. TX2, NX
+## 3. TX2, NX
 #### ● Actually, there is no installation difference between TX2 and NX
+<br><br>
+
+## 4. Run
+#### ● you have to get a calibration data using [kalibr](https://github.com/zinuok/kalibr)
+```
+$ roslaunch realsense2_camera rs_camera.launch
+$ roslaunch mavros px4.launch
+$ roslaunch rovio d435i_rovio_node_mono.launch
+```
 
