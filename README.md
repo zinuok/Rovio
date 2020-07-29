@@ -75,6 +75,9 @@ $ catkin build rovio -DCMAKE_BUILD_TYPE=Release -j3 -DMAKE_SCENE=ON
 
 ## 4. Run
 #### ● you have to get a calibration data using [kalibr](https://github.com/zinuok/kalibr)
+<br>
+
+#### ● I made additional launch file named 'd435i_rovio_node_mono' for mono
 ```
 $ roslaunch realsense2_camera rs_camera.launch
 $ roslaunch mavros px4.launch
