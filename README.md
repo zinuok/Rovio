@@ -45,7 +45,7 @@ $ cd rovio && git submodule update --init --recursive
 ## 2. Installation
 
 + **rovio** is set to 'stereo'. However, the 'stereo mode' doesn't work in my case. Fortunately, rovio supports changing **'stereo mode' <-> 'mono mode'**. Let's change the rovio into **'mono'**
-<br>in ~/rovio/CMakeLists.txt line 5, change
+<br><br>in ~/rovio/CMakeLists.txt line 5, change
 ```
 set(ROVIO_NCAM 2 CACHE STRING "Number of enabled cameras")
 to
