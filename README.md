@@ -18,7 +18,7 @@
 ### 1. Prerequisites
 ####    &nbsp;&nbsp;&nbsp;&nbsp;● kindr
 ####    &nbsp;&nbsp;&nbsp;&nbsp;● lightweight_filtering
-### 2. Installation
+### 2. Install
 ### 3. TX2, NX
 ####    &nbsp;&nbsp;&nbsp;&nbsp;● Actually, there is no installation difference between TX2 and NX
 ### 4. Run
