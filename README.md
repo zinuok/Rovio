@@ -28,22 +28,35 @@
 ### ● kindr
 + kindr from [here](https://github.com/ethz-asl/kindr)
 ```
-$ 
+$ cd ~/catkin_ws/src
+$ git clone https://github.com/ANYbotics/kindr
+$ cd .. && catkin build -DCMAKE_BUILD_TYPE=Release -j3
 ```
+
 ### ● lightweight_filtering
 + as submodule, use "git submodule update --init --recursive"
 ```
-$ su
+$ cd ~/catkin_ws/src
+$ git clone https://github.com/ethz-asl/rovio
+$ cd rovio && git submodule update --init --recursive
 ```
 <br><br>
 
 ## 2. Installation
-+ git clone and build from source
++ git clone and build from source (already done with lightweight_filtering installation)
 ```
 $ cd ~/catkin_ws/src
-$ git clone https://github.com/HKUST-Aerial-Robotics/VINS-Mono.git
-$ cd ../ && catkin build -DCMAKE_BUILDTYPE=Release -j3
+$ catkin build rovio -DCMAKE_BUILD_TYPE=Release -j3
 $ source ~/catkin_ws/devel/setup.bash
+```
+
++ (optional) install with opengl scene
+    + Additional dependencies: opengl, glut, glew
+```
+$ sudo apt-get install -y freeglut3-dev, sudo apt-get install libglew-dev
+$ sudo apt-get install -y freeglut3-dev libglew-dev
+$ cd ~/catkin_ws/src
+$ catkin build rovio -DCMAKE_BUILD_TYPE=Release -j3 -DMAKE_SCENE=ON
 ```
 <br><br>
 
