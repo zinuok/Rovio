@@ -51,13 +51,14 @@ set(ROVIO_NCAM 2 CACHE STRING "Number of enabled cameras")
 to
 set(ROVIO_NCAM 1 CACHE STRING "Number of enabled cameras")
 ```
+<br>
 + build from source (already cloned with the lightweight_filtering installation)
 ```
 $ cd ~/catkin_ws/src
 $ catkin build rovio -DCMAKE_BUILD_TYPE=Release -j3
 $ source ~/catkin_ws/devel/setup.bash
 ```
-
+<br>
 + (optional) install with opengl scene
     + Additional dependencies: opengl, glut, glew
 ```
