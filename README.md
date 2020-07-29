@@ -44,13 +44,13 @@ $ cd rovio && git submodule update --init --recursive
 
 ## 2. Installation
 
-+ rovio is set to 'stereo'. However, the 'stereo mode' doesn't work in my case. Fortunately, rovio supports changing 'stereo mode' <-> 'mono mode'. Let's change the rovio into 'mono'
-    + in ~/rovio/CMakeLists.txt line 5, change
-    ```
-    set(ROVIO_NCAM 2 CACHE STRING "Number of enabled cameras")
-    to
-    set(ROVIO_NCAM 1 CACHE STRING "Number of enabled cameras")
-    ```
++ **rovio** is set to 'stereo'. However, the 'stereo mode' doesn't work in my case. Fortunately, rovio supports changing **'stereo mode' <-> 'mono mode'**. Let's change the rovio into **'mono'**
+in ~/rovio/CMakeLists.txt line 5, change
+```
+set(ROVIO_NCAM 2 CACHE STRING "Number of enabled cameras")
+to
+set(ROVIO_NCAM 1 CACHE STRING "Number of enabled cameras")
+```
 + build from source (already cloned with the lightweight_filtering installation)
 ```
 $ cd ~/catkin_ws/src
