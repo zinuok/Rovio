@@ -17,7 +17,7 @@
 # Index
 ### 1. Prerequisites
 ####    &nbsp;&nbsp;&nbsp;&nbsp;● kindr
-####    &nbsp;&nbsp;&nbsp;&nbsp;● lightweight_filtering (as submodule, use "git submodule update --init --recursive")
+####    &nbsp;&nbsp;&nbsp;&nbsp;● lightweight_filtering
 ### 2. Installation
 ### 3. TX2, NX
 ####    &nbsp;&nbsp;&nbsp;&nbsp;● Actually, there is no installation difference between TX2 and NX
