@@ -70,7 +70,7 @@ $ catkin build rovio -DCMAKE_BUILD_TYPE=Release -j3 -DMAKE_SCENE=ON
 <br><br>
 
 ## 3. TX2, NX
-#### ● Actually, there is no installation difference between TX2 and NX
+#### ● Actually, no installation difference between TX2 and NX
 <br><br>
 
 ## 4. Run
