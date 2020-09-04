@@ -2,6 +2,7 @@
 # Rovio
 + **hardware setup**
     + jetson TX2 - Jetpack 4.2
+    + jetson AGX Xavier
     + jetson Xavier NX - Jetpack 4.4
     + realsense D435i (color, infra1, infra2)
     + pixhawk4 mini
@@ -20,7 +21,7 @@
 ####    &nbsp;&nbsp;&nbsp;&nbsp;● lightweight_filtering
 ### 2. Install
 ### 3. TX2, NX
-####    &nbsp;&nbsp;&nbsp;&nbsp;● Actually, there is no installation difference between TX2 and NX
+####    &nbsp;&nbsp;&nbsp;&nbsp;● Actually, there is no installation among between TX2, Xavier, and NX
 ### 4. Run
 <br><br>
 
@@ -70,7 +71,7 @@ $ catkin build rovio -DCMAKE_BUILD_TYPE=Release -j3 -DMAKE_SCENE=ON
 <br><br>
 
 ## 3. TX2, NX
-#### ● Actually, no installation difference between TX2 and NX
+#### ● Actually, no installation difference among TX2, Xavier, and NX
 <br><br>
 
 ## 4. Run
