@@ -56,7 +56,7 @@ set(ROVIO_NCAM 1 CACHE STRING "Number of enabled cameras")
 + build from source (already cloned with the lightweight_filtering installation)
 ```
 $ cd ~/catkin_ws/src
-$ catkin build rovio -DCMAKE_BUILD_TYPE=Release -j3
+$ catkin build rovio -DCMAKE_BUILD_TYPE=Release -j $(nproc)
 $ source ~/catkin_ws/devel/setup.bash
 ```
 
@@ -66,7 +66,7 @@ $ source ~/catkin_ws/devel/setup.bash
 $ sudo apt-get install -y freeglut3-dev, sudo apt-get install libglew-dev
 $ sudo apt-get install -y freeglut3-dev libglew-dev
 $ cd ~/catkin_ws/src
-$ catkin build rovio -DCMAKE_BUILD_TYPE=Release -j3 -DMAKE_SCENE=ON
+$ catkin build rovio -DCMAKE_BUILD_TYPE=Release -j $(nproc) -DMAKE_SCENE=ON
 ```
 <br><br>
 
