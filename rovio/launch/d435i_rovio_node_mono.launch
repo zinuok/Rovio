@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <launch>
   <node name="rvizvisualisation" pkg="rviz" type="rviz" args="-d $(find rovio)/cfg/rovio_rviz_config.rviz" />
+  <!--
   <node name="trajectory" pkg="hector_trajectory_server_rovio" type="hector_trajectory_server_rovio" />
+-->
 
   <node pkg="rovio" type="rovio_node" name="rovio" output="screen">
 
